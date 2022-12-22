@@ -6,7 +6,7 @@ img = cv2.imread('R3.png')
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ret,thresh = cv2.threshold(gray,50,255,1)
 
-# Find contours with cv2.RETR_CCOMP
+# Find contours 
 contours,hierarchy = cv2.findContours(thresh,cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
 
 for i,c in enumerate(contours):
